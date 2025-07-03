@@ -401,7 +401,7 @@ function App() {
                   placeholder="Votre email"
                   className="flex-1 bg-gray-800 rounded-lg px-4 py-2 text-white"
                 />
-                <button className="w-10 h-10 rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-400 hover:to-purple-400 transition-all duration-300 hover:scale-105 flex items-center justify-center border border-pink-500/30">
+                <button className="w-12 h-12 rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-400 hover:to-purple-400 transition-all duration-300 hover:scale-105 flex items-center justify-center border border-pink-500/30">
                   <Send size={16} />
                 </button>
               </div>
