@@ -148,8 +148,8 @@ function App() {
                     </a>
                   );
                 })}
-                <button className="btn-primary flex items-center gap-2">
-                  <Wallet2 size={18} />
+                <button className="relative overflow-hidden px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-500 border border-pink-500/30 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-400 hover:to-purple-400 hover:scale-105 flex items-center gap-1.5">
+                  <Wallet2 size={14} />
                   Connecter
                 </button>
               </div>
@@ -401,8 +401,8 @@ function App() {
                   placeholder="Votre email"
                   className="flex-1 bg-gray-800 rounded-lg px-4 py-2 text-white"
                 />
-                <button className="btn-primary px-4 py-2">
-                  <Send size={20} />
+                <button className="relative overflow-hidden px-3 py-2 rounded-lg text-sm font-medium transition-all duration-500 border border-pink-500/30 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-400 hover:to-purple-400 hover:scale-105">
+                  <Send size={16} />
                 </button>
               </div>
             </div>
