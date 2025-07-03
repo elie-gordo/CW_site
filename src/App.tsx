@@ -95,19 +95,19 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen relative flex flex-col items-center justify-center gap-8">
+      <div className="min-h-screen relative flex flex-col items-center justify-center gap-8 px-4">
         <div 
           className="absolute inset-0 bg-[url('https://image.noelshack.com/fichiers/2025/13/5/1743119568-cyberpunk-one.jpg')] bg-cover bg-center"
           style={{ backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
         ></div>
         <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
         <div className="relative z-10 text-center">
-          <h1 className="text-white text-6xl font-bold mb-8 animate-float">
+          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-8 animate-float">
             CryptoWaifus
           </h1>
           <button
             onClick={handleDiscoverClick}
-            className="btn-primary text-xl px-12 py-4 text-white hover:text-white/90"
+            className="btn-primary text-lg sm:text-xl px-8 sm:px-12 py-3 sm:py-4 text-white hover:text-white/90"
           >
             Découvrir
           </button>
@@ -123,7 +123,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-pink-500">CryptoWaifus</span>
+              <span className="text-xl sm:text-2xl font-bold text-pink-500">CryptoWaifus</span>
             </div>
             <div className="hidden md:block">
               <div className="flex items-center space-x-4">
@@ -214,10 +214,10 @@ function App() {
           <div className="absolute inset-0 bg-[url('https://image.noelshack.com/fichiers/2025/13/5/1743119568-cyberpunk-one.jpg')] bg-cover bg-center opacity-90"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 to-gray-900/90"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
               Découvrez l'Art des CryptoWaifus
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Rejoignez notre collection exclusive d'art digital inspiré de l'anime sur la blockchain
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -238,12 +238,12 @@ function App() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-24 bg-gray-800">
+        <section id="about" className="py-16 sm:py-20 md:py-24 bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
               À Propos
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               <div className="bg-gray-900 p-6 rounded-xl">
                 <h3 className="text-xl font-semibold mb-4 text-pink-500">Art Unique</h3>
                 <p className="text-gray-300">Chaque CryptoWaifu est une œuvre d'art unique</p>
@@ -261,17 +261,17 @@ function App() {
         </section>
 
         {/* Marketplace Section */}
-        <section id="marketplace" className="py-24 bg-gray-900">
+        <section id="marketplace" className="py-16 sm:py-20 md:py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
               Marché
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {marketplaceItems.map((item) => (
                 <div key={item.id} className="bg-gray-800 rounded-xl overflow-hidden">
-                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <img src={item.image} alt={item.title} className="w-full h-48 sm:h-56 object-cover" />
+                  <div className="p-4 sm:p-6">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-2">{item.title}</h3>
                     <p className="text-pink-500 mb-4">{item.price}</p>
                     <button className="btn-primary w-full">Acheter</button>
                   </div>
@@ -282,17 +282,17 @@ function App() {
         </section>
 
         {/* Collections Section */}
-        <section id="collections" className="py-24 bg-gray-800">
+        <section id="collections" className="py-16 sm:py-20 md:py-24 bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
               Collections
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               {collections.map((collection) => (
                 <div key={collection.id} className="bg-gray-900 rounded-xl overflow-hidden">
-                  <img src={collection.image} alt={collection.title} className="w-full h-64 object-cover" />
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-4">{collection.title}</h3>
+                  <img src={collection.image} alt={collection.title} className="w-full h-48 sm:h-56 md:h-64 object-cover" />
+                  <div className="p-4 sm:p-6">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-4">{collection.title}</h3>
                     <button className="btn-secondary w-full">Voir la collection</button>
                   </div>
                 </div>
@@ -302,19 +302,19 @@ function App() {
         </section>
 
         {/* DAO Section */}
-        <section id="dao" className="py-24 bg-gray-900">
+        <section id="dao" className="py-16 sm:py-20 md:py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
               DAO
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gray-800 p-8 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4">Gouvernance</h3>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+              <div className="bg-gray-800 p-6 sm:p-8 rounded-xl">
+                <h3 className="text-lg sm:text-xl font-semibold mb-4">Gouvernance</h3>
                 <p className="text-gray-300 mb-6">Votez sur l'évolution du projet</p>
                 <button className="btn-primary">Participer</button>
               </div>
-              <div className="bg-gray-800 p-8 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4">Récompenses</h3>
+              <div className="bg-gray-800 p-6 sm:p-8 rounded-xl">
+                <h3 className="text-lg sm:text-xl font-semibold mb-4">Récompenses</h3>
                 <p className="text-gray-300 mb-6">Gagnez des récompenses</p>
                 <button className="btn-primary">En savoir plus</button>
               </div>
@@ -323,22 +323,22 @@ function App() {
         </section>
 
         {/* Guide Section */}
-        <section id="guide" className="py-24 bg-gray-800">
+        <section id="guide" className="py-16 sm:py-20 md:py-24 bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
               Guide
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               <div className="bg-gray-900 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4">Créer un Wallet</h3>
+                <h3 className="text-lg sm:text-xl font-semibold mb-4">Créer un Wallet</h3>
                 <p className="text-gray-300">Créez et sécurisez votre wallet</p>
               </div>
               <div className="bg-gray-900 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4">Acheter des NFTs</h3>
+                <h3 className="text-lg sm:text-xl font-semibold mb-4">Acheter des NFTs</h3>
                 <p className="text-gray-300">Achetez vos premiers CryptoWaifus</p>
               </div>
               <div className="bg-gray-900 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4">Rejoindre la DAO</h3>
+                <h3 className="text-lg sm:text-xl font-semibold mb-4">Rejoindre la DAO</h3>
                 <p className="text-gray-300">Participez à la gouvernance</p>
               </div>
             </div>
@@ -347,12 +347,12 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 py-12 border-t border-gray-800">
+      <footer className="bg-gray-900 py-8 sm:py-12 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div className="sm:col-span-2 lg:col-span-1">
               <h3 className="text-xl font-bold text-pink-500 mb-4">CryptoWaifus</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-400 text-sm sm:text-base">
                 La première collection NFT d'art anime sur la blockchain
               </p>
             </div>
@@ -367,7 +367,7 @@ function App() {
                         e.preventDefault();
                         scrollToSection(item.id);
                       }}
-                      className="text-gray-400 hover:text-pink-500 transition-colors"
+                      className="text-gray-400 hover:text-pink-500 transition-colors text-sm sm:text-base"
                     >
                       {item.label}
                     </a>
@@ -382,7 +382,7 @@ function App() {
                   <li key={item.id}>
                     <a
                       href={`#${item.id}`}
-                      className="text-gray-400 hover:text-pink-500 transition-colors"
+                      className="text-gray-400 hover:text-pink-500 transition-colors text-sm sm:text-base"
                     >
                       {item.label}
                     </a>
@@ -392,23 +392,23 @@ function App() {
             </div>
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Newsletter</h4>
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-400 mb-4 text-sm sm:text-base">
                 Restez informé des dernières actualités
               </p>
               <div className="flex gap-2">
                 <input
                   type="email"
                   placeholder="Votre email"
-                  className="flex-1 bg-gray-800 rounded-lg px-4 py-2 text-white"
+                  className="flex-1 bg-gray-800 rounded-lg px-3 sm:px-4 py-2 text-white text-sm sm:text-base"
                 />
                 <button className="w-12 h-12 rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-400 hover:to-purple-400 transition-all duration-300 hover:scale-105 flex items-center justify-center border border-pink-500/30">
-                  <Send size={16} />
+                  <Send size={20} />
                 </button>
               </div>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; 2025 CryptoWaifus. Tous droits réservés.</p>
+            <p className="text-sm sm:text-base">&copy; 2025 CryptoWaifus. Tous droits réservés.</p>
           </div>
         </div>
       </footer>
